@@ -2,7 +2,7 @@ Vagrant.require_version ">= 1.7.2"
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "cooperc/wily64-developer-environment"
+  config.vm.box = "cooperc/developer-environment"
 
   config.vm.provision :shell, path: "bootstrap.sh"
 
