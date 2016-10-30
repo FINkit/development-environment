@@ -1,2 +1,2 @@
-# developer-environment
-A vagrant provisioned developer environment using the vivid64-developer-environment box
+# development-environment
+A vagrant provisioned development environment using the developer-environment box
