@@ -25,7 +25,7 @@ $linux = (/linux/ =~ RUBY_PLATFORM) != nil
 Vagrant.configure(2) do |config|
 
   config.vm.box = "cooperc/developer-environment"
-  config.vm.box_version = "0.42"
+  config.vm.box_version = "0.66"
 
   if Vagrant.has_plugin?("vagrant-vbguest")
     config.vbguest.auto_update = true
