@@ -3,7 +3,7 @@
 
 # Check and Install required plugins if missing
 installed_plugins = false
-required_plugins=%w( vagrant-vbguest vagrant-cachier vagrant-timezone )
+required_plugins=%w( vagrant-vbguest vagrant-cachier vagrant-timezone vagrant-reload )
 required_plugins.each do |plugin|
   if !Vagrant.has_plugin?plugin
     system "vagrant plugin install #{plugin}"
@@ -25,7 +25,7 @@ $linux = (/linux/ =~ RUBY_PLATFORM) != nil
 Vagrant.configure(2) do |config|
 
   config.vm.box = "cooperc/developer-environment"
-  config.vm.box_version = "0.66"
+  config.vm.box_version = "0.69"
 
   if Vagrant.has_plugin?("vagrant-vbguest")
     config.vbguest.auto_update = true
@@ -39,10 +39,14 @@ Vagrant.configure(2) do |config|
     config.timezone.value = "Europe/London"
   end
 
+  config.vm.provision :shell, path: "scripts/wait_for_updates.sh"
+
   # Run Ansible from the Vagrant VM
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "ansible/main.yml"
   end
+
+  config.vm.provision :reload
 
   config.vm.provider "virtualbox" do |v|
     v.gui = true
