@@ -29,6 +29,7 @@ Vagrant.configure(2) do |config|
 
   if Vagrant.has_plugin?("vagrant-vbguest")
     config.vbguest.auto_update = true
+    config.vbguest.iso_path = "http://download.virtualbox.org/virtualbox/%{version}/VBoxGuestAdditions_%{version}.iso"
   end
 
   if Vagrant.has_plugin?("vagrant-cachier")
