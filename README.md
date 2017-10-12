@@ -16,7 +16,7 @@ _Note: Users of Windows 7 and 8 will need to [upgrade Powershell to 5.1](https:/
 ## Getting started
 1. Clone this repository with:
   ```git clone https://github.com/FINkit/development-environment```
-2. Change into the directory and run:
+2. Change into the `development-environment` directory and run:
   ```vagrant up```
 
 You will be asked a series of questions about what config you want to give your environment. These are stored in a local `.env` file, which can be edited later (or deleted if you want re-prompting).
