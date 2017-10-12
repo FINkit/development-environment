@@ -7,9 +7,11 @@ A vagrant provisioned development environment using the [development-environment
 * 30GB disk space
 
 ### Software
-* [Vagrant 1.9.5](https://releases.hashicorp.com/vagrant/1.9.5/) (newer versions can be used, but on Windows require powershell 5.1. Which can be downloaded from [here](https://www.microsoft.com/en-us/download/details.aspx?id=54616))
+* [Vagrant 1.9.5](https://releases.hashicorp.com/vagrant/1.9.5/)
 * [Virtualbox 5.1.22](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1) (newer versions do work, but we guarantee the version listed works)
 * [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+_Note: Users of Windows 7 and 8 will need to [upgrade Powershell to 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616) if you use a version of Vagrant greater than 1.9.5._
 
 ## Getting started
 1. Clone this repository with:
