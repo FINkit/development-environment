@@ -42,7 +42,8 @@ if ARGV[0] == 'up'
   end
 
   if memory.to_i < "8000000000".to_i
-    puts "You need at least 8192MB of memory on your host machine to run this development environment, you only have " + memory.to_i/1000000 + "MB!"
+    current_mem = memory.to_i/1000000
+    puts "You need at least 8192MB of memory on your host machine to run this development environment, you only have #{current_mem} MB!"
     exit
   end
 end
