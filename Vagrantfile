@@ -138,8 +138,9 @@ Vagrant.configure(2) do |config|
 
   config.env.enable
 
-  config.vm.box = "cooperc/developer-environment"
-  config.vm.box_version = "1.0.1507285549"
+  # Latest version available at https://app.vagrantup.com/finkit/boxes/development-environment-base
+  config.vm.box = "finkit/development-environment-base"
+  config.vm.box_version = "1.0.1507810689"
 
   if Vagrant.has_plugin?("vagrant-vbguest")
     config.vbguest.auto_update = true
