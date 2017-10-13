@@ -22,4 +22,6 @@ _Note: Windows 7 and Windows 8 users will need to [upgrade Powershell to 5.1](ht
   ```vagrant up```
 3. Follow on screen instructions.
 
-You will be asked a series of questions about what config you want to give your environment. These are stored in a local `.env` file, which can be edited later (or deleted if you want re-prompting).
+You will be asked a series of questions about what configuration you want to give your development environment. These are stored in a local `.env` file, which can be edited later (or deleted if you want re-prompting).
+
+The username and password for the development environment are `vagrant:vagrant`.
