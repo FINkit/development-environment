@@ -1,5 +1,19 @@
 # development-environment
-A vagrant provisioned development environment using the [development-environment-base](https://github.com/FINkit/development-environment-base) box.
+
+## Overview
+A vagrant provisioned development environment using the [development-environment-base](https://github.com/FINkit/development-environment-base) box, with the following pre-installed tools:
+
+* [Apache Maven](https://maven.apache.org/), version 3.5.0
+* [BOSH CLI](https://github.com/cloudfoundry/bosh-cli), version 2.0.43
+* [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/), version 6.32.0
+* [Docker Compose](https://docs.docker.com/compose/), version 1.16.1
+* [Git](https://git-scm.com/), version 2.14.2
+* [Go](https://golang.org/), version 1.9.1
+* [Gradle](https://gradle.org/), version 4.2.1
+* [IntelliJ Community Edition](https://www.jetbrains.com/idea/), version 2017.2.5
+* [Postman](https://www.getpostman.com/), version 5.3.0
+* [Spring Tool Suite](https://spring.io/tools/sts),  3.9.0
+* [Terraform CLI](https://www.terraform.io/), version 0.10.7
 
 This will install:
 - Intellij Community Edition 
