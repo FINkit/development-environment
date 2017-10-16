@@ -2,13 +2,13 @@
 A vagrant provisioned development environment using the [development-environment-base](https://github.com/FINkit/development-environment-base) box.
 
 This will install:
-- Intellij Community Edition 
-- STS 
-- Eclipse 
-- Maven 
-- Cloud Foundry CLI 
-- BOSH 2.0 CLI 
-- and a number of other supporting development tools.
+* Intellij Community Edition
+* Spring Tool Suite
+* Eclipse
+* Maven
+* Cloud Foundry CLI
+* BOSH 2.0 CLI
+* and a number of other supporting development tools.
 
 For full details of the tooling and versions provided with this environment please refer to https://github.com/FINkit/development-environment-base/blob/master/ansible/main.yml
 
