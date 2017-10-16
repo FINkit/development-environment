@@ -1,6 +1,17 @@
 # development-environment
 A vagrant provisioned development environment using the [development-environment-base](https://github.com/FINkit/development-environment-base) box.
 
+This will install:
+- Intellij Community Edition 
+- STS 
+- Eclipse 
+- Maven 
+- Cloud Foundry CLI 
+- BOSH 2.0 CLI 
+- and a number of other supporting development tools.
+
+For full details of the tooling and versions provided with this environment please refer to https://github.com/FINkit/development-environment-base/blob/master/ansible/main.yml
+
 ## Prerequisites
 ### Hardware
 * 8GB RAM (16GB is recommended)
@@ -23,5 +34,8 @@ _Note: Windows 7 and Windows 8 users will need to [upgrade Powershell to 5.1](ht
 3. Follow on screen instructions.
 
 You will be asked a series of questions about what configuration you want to give your development environment. These are stored in a local `.env` file, which can be edited later (or deleted if you want re-prompting).
+
+## IMPORTANT	
+When the UI loads you will be prompted for a password. Please wait for the entire provisioning process to complete before entering the password. You will be notified in the terminal window when you can login.
 
 The username and password for the development environment are `vagrant:vagrant`.
