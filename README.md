@@ -4,13 +4,12 @@ A vagrant provisioned development environment using the [development-environment
 This will install:
 * Intellij Community Edition
 * Spring Tool Suite
-* Eclipse
 * Maven
 * Cloud Foundry CLI
 * BOSH 2.0 CLI
 * and a number of other supporting development tools.
 
-For full details of the tooling and versions provided with this environment please refer to https://github.com/FINkit/development-environment-base/blob/master/ansible/main.yml
+For full details of the tooling and versions provided with this environment please refer to [the parent ansible playbook](https://github.com/FINkit/development-environment-base/blob/master/ansible/main.yml) as well as the [developer packages playbook](https://github.com/FINkit/development-environment-base/blob/master/ansible/roles/developer_packages/tasks/main.yml).
 
 ## Prerequisites
 ### Hardware
