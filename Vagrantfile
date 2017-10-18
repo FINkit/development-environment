@@ -75,7 +75,7 @@ Vagrant.configure(2) do |config|
     v.customize ["modifyvm", :id, "--ioapic", "on"]
     v.customize ["modifyvm", :id, "--accelerate3d", "on"]
     v.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
-    v.customize ["guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/ - timesync-set-threshold", 10000]
+    v.customize ["guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/ --timesync-set-threshold", 10000]
   end
   config.vm.synced_folder ".", "/vagrant"
 end
