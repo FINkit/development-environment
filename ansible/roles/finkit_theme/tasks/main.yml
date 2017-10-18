@@ -1,0 +1,15 @@
+---
+  - name: set monitise theme
+    copy:
+      src={{ item.src }}
+      dest={{ item.dest }}
+    with_items:
+    - { src: 'finkit-wallpaper.jpg', dest: '/home/vagrant/finkit-wallpaper.jpg' }
+
+  - name: set monitise background
+    lineinfile:
+      dest="/home/vagrant/.bashrc"
+      line="gsettings set org.gnome.desktop.background picture-uri 'file:///home/vagrant/finkit-wallpaper.jpg'"
+      owner=vagrant
+      state=present
+      insertafter=EOF
