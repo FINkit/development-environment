@@ -42,7 +42,7 @@ Vagrant.configure(2) do |config|
 
   # Latest version available at https://app.vagrantup.com/finkit/boxes/development-environment-base
   config.vm.box = "finkit/development-environment-base"
-  config.vm.box_version = "1.0.1509044488"
+  config.vm.box_version = "1.0.1518193165"
 
   if Vagrant.has_plugin?("vagrant-vbguest")
     config.vbguest.auto_update = true
