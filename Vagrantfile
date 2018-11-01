@@ -3,7 +3,7 @@
 
 # Check and Install required plugins if missing
 installed_plugins = false
-required_plugins=%w( vagrant-vbguest vagrant-reload vagrant-cachier vagrant-env vagrant-triggers )
+required_plugins=%w( vagrant-vbguest vagrant-reload vagrant-cachier vagrant-env )
 required_plugins.each do |plugin|
   if !Vagrant.has_plugin?plugin
     system "vagrant plugin install #{plugin}"
@@ -19,25 +19,31 @@ end
 Vagrant.require_version ">= 1.9.5"
 
 Vagrant.configure(2) do |config|
-  config.trigger.before :up do
-    print "**********************************************************************\n"
-    print "* FINkit Development Environment                                     *\n"
-    print "*                                                                    *\n"
-    print "* WARNING!!! Do not login to development environment before          *\n"
-    print "* provisioning completes!!                                           *\n"
-    print "*                                                                    *\n"
-    print "* Premature access can cause adverse side effects and instability.   *\n"
-    print "* A message will display when it is safe to login.                   *\n"
-    print "**********************************************************************\n"
+  config.trigger.before :up do |trigger|
+    trigger.name = "Start"
+    trigger.info =
+        "******************************************************\n" +
+        "* FinKit Development Environment                     *\n" +
+        "*                                                    *\n" +
+        "* WARNING!!! Do not login to development environment *\n" +
+        "* before provisioning completes!!                    *\n" +
+        "*                                                    *\n" +
+        "* Premature access can cause adverse side effects    *\n" +
+        "* and instability.                                   *\n" +
+        "*                                                    *\n" +
+        "* A message will display when it is safe to login.   *\n" +
+        "******************************************************\n"
   end
 
-  config.trigger.after :up do
-    print "**********************************************************************\n"
-    print "* FINkit Development Environment                                     *\n"
-    print "*                                                                    *\n"
-    print "* You can now login to the development environment                   *\n"
-    print "* The username and password are both 'vagrant'                       *\n"
-    print "**********************************************************************\n"
+  config.trigger.after :up do |trigger|
+    trigger.name = "Finished"
+    trigger.info =
+        "******************************************************\n" +
+        "* FinKit Development Environment                     *\n" +
+        "*                                                    *\n" +
+        "* You can now login to the development environment   *\n" +
+        "* The username and password are both 'vagrant'       *\n" +
+        "******************************************************\n"
   end
 
   # Latest version available at https://app.vagrantup.com/finkit/boxes/development-environment-base
